@@ -24,7 +24,7 @@ The project consists of the following files:
 **Setup:**
 
 * Build the Docker image by running `docker build -t order-processing-system .` in the project directory.
-* Run the Docker container by running `docker run -p 8000:8000 order-processing-system`.
+* Run the Docker container by running `docker run -p 5000:5000 order-processing-system`.
 
 **Flask routes:**
 1. /review/<userId>: Retrieves the order for a given user ID, checks the inventory, and renders the review page. If the order is out of stock, it displays an appropriate message.
