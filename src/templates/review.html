@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Review order</title>    
+{% endblock %}
+
+{% block content %}
+<h1 class="h1">Review Order</h1>
+<div class="jumbotron">
+
+<p>order:</p>
+<p>&emsp;{{order['proudectname']}}: ${{pricepreitem}}</p>
+<p>&emsp;Quantity: {{order['quantity']}}</p>
+<p>&emsp;Total: ${{pricepreitem*order['quantity']}}</p>
+
+
+  {% if outofstock %}
+  <p class="lead ">Out of stock!! please try adain later &#128542;</p>
+  {% else %}
+  <a href="{{ url_for('checkout',userId=userId) }}" class="btn btn-primary">proceed to checkout</a>
+  {% endif %}
+</div>
+{% endblock %}

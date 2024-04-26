@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Checkout</title>    
+{% endblock %}
+
+{% block content %}
+
+      <div class="jumbotron">
+        <h1 class="display-3">Review your order</h1>
+        <a href="#" id="checkoutbtn" class="btn btn-primary">Checkout Now</a>
+      </div>
+      <script> const userId = '{{userId}}'; </script>
+      <script src="https://js.stripe.com/v3/"></script>
+      <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    </div> 
+  {% endblock %} 
